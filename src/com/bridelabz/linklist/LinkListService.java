@@ -34,6 +34,36 @@ public class LinkListService
 		}
 	}
 	
+	public void insertAfter(int afterNodeData , int data)
+	{
+		LinkList newNode = new LinkList();
+		newNode.data = data;
+		newNode.next = null;
+		if (head == null) 
+		{			
+			this.head = newNode;
+		}
+		else
+		{
+			LinkList currentNode = head;
+			while (currentNode.data != afterNodeData && currentNode.next != null)
+			{
+				currentNode = currentNode.next;
+			}
+			if(currentNode.data != afterNodeData)
+			{
+				System.out.println(afterNodeData+" Not found ");
+			}
+			else 
+			{				
+				newNode.next = currentNode.next;
+				currentNode.next = newNode;
+			}
+
+		}
+		
+	}
+	
 	public void print()
 	{
 		LinkList tempNode = head;

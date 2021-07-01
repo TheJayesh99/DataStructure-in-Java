@@ -6,8 +6,8 @@ public class LinkListMain {
 		System.out.println("Welcome to LinkList");
 		LinkListService linkList = new LinkListService();
 		linkList.append(56);
-		linkList.append(30);
 		linkList.append(70);
+		linkList.insertAfter(56,30);
 		linkList.print();
 	}
 
