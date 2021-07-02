@@ -1,9 +1,9 @@
 package com.bridelabz.linklist;
 
-public class LinkList
+public class LinkList <T>
 {
-	public int data;
-	public LinkList next;
+	public T data;
+	public LinkList<T> next;
 	public LinkList()
 	{
 		super();

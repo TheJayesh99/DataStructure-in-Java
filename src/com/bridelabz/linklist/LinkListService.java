@@ -1,23 +1,23 @@
 package com.bridelabz.linklist;
 
-public class LinkListService
+public class LinkListService<T>
 {
 
-	LinkList head;
+	LinkList<T> head;
 	SortedLinkedList sortHead;
 
-	public void add(int data) 
+	public void add(T data) 
 	{
-		LinkList newNode = new LinkList();
+		LinkList<T> newNode = new LinkList<T>();
 		newNode.data = data;
 		newNode.next = head;
 		this.head = newNode;
 		System.out.println("Added Node "+data);
 	}
 
-	public void append(int data)
+	public void append(T data)
 	{
-		LinkList newNode = new LinkList();
+		LinkList<T> newNode = new LinkList<T>();
 		newNode.data = data;
 		newNode.next = null;
 		if (head == null) 
@@ -26,7 +26,7 @@ public class LinkListService
 		}
 		else
 		{
-			LinkList currentNode = head;
+			LinkList<T> currentNode = head;
 			while (currentNode.next != null)
 			{
 				currentNode = currentNode.next;
@@ -36,9 +36,9 @@ public class LinkListService
 		System.out.println("Appended Node "+data);
 	}
 
-	public void insertAfter(int afterNodeData , int data)
+	public void insertAfter(T afterNodeData , T data)
 	{
-		LinkList newNode = new LinkList();
+		LinkList<T> newNode = new LinkList<T>();
 		newNode.data = data;
 		newNode.next = null;
 		if (head == null) 
@@ -48,7 +48,7 @@ public class LinkListService
 		}
 		else
 		{
-			LinkList currentNode = head;
+			LinkList<T> currentNode = head;
 			while (currentNode.data != afterNodeData && currentNode.next != null)
 			{
 				currentNode = currentNode.next;
@@ -87,8 +87,8 @@ public class LinkListService
 		}
 		else 
 		{
-			LinkList endNode = head;
-			LinkList currentNode = endNode;
+			LinkList<T> endNode = head;
+			LinkList<T> currentNode = endNode;
 			while(endNode.next != null)
 			{
 				currentNode = endNode;
@@ -99,7 +99,7 @@ public class LinkListService
 		}
 	}
 
-	public void searchNode(int searchData)
+	public void searchNode(T searchData)
 	{
 		if(head == null)
 		{
@@ -108,7 +108,7 @@ public class LinkListService
 		else
 		{	
 			int countPosition = 1;
-			LinkList currentNode = head;
+			LinkList<T> currentNode = head;
 			while(currentNode.data != searchData && currentNode.next != null)
 			{
 				currentNode = currentNode.next;
@@ -125,7 +125,7 @@ public class LinkListService
 		}
 	}
 
-	public void delete(int data)
+	public void delete(T data)
 	{
 		if(head == null)
 		{
@@ -138,8 +138,8 @@ public class LinkListService
 		}
 		else
 		{	
-			LinkList endNode = head;
-			LinkList currentNode = endNode;
+			LinkList<T> endNode = head;
+			LinkList<T> currentNode = endNode;
 			while(endNode.next != null && endNode.data != data)
 			{
 				currentNode = endNode;
@@ -166,7 +166,7 @@ public class LinkListService
 		else 
 		{	
 			int countNode = 1;
-			LinkList tempNode = head;
+			LinkList<T> tempNode = head;
 			while(tempNode.next != null)
 			{
 				countNode++;
@@ -184,7 +184,7 @@ public class LinkListService
 		}
 		else 
 		{			
-			LinkList tempNode = head;
+			LinkList<T> tempNode = head;
 			System.out.println("The required linklist is");
 			while(tempNode.next != null)
 			{
@@ -199,7 +199,7 @@ public class LinkListService
 	//	For Ordered list
 
 
-	public void sortAdd(int data) 
+	public  void sortAdd(int  data) 
 	{
 		SortedLinkedList newNode = new SortedLinkedList();
 		newNode.sortData = data;
@@ -208,7 +208,7 @@ public class LinkListService
 		{			
 			this.sortHead = newNode;	
 		}
-		else if(data < sortHead.sortData)
+		else if(data <= sortHead.sortData)
 		{
 			newNode.sortNext = sortHead;
 			sortHead = newNode;
@@ -217,7 +217,7 @@ public class LinkListService
 		{
 			SortedLinkedList checkNode = sortHead;
 			SortedLinkedList previousCheckNode = checkNode;
-			while(checkNode.sortNext != null && checkNode.sortData <= data)
+			while(checkNode.sortNext != null && checkNode.sortData < data)
 			{
 				previousCheckNode = checkNode;
 				checkNode = checkNode.sortNext;
