@@ -33,7 +33,7 @@ public class LinkListService
 			}
 			currentNode.next = newNode;
 		}
-		System.out.println("Added Node "+data);
+		System.out.println("Appended Node "+data);
 	}
 
 	public void insertAfter(int afterNodeData , int data)
@@ -192,6 +192,7 @@ public class LinkListService
 				tempNode = tempNode.next;
 			}
 			System.out.println(tempNode.data);
+			System.out.println("---------------------------------------------------");
 		}
 	}
 
@@ -243,13 +244,14 @@ public class LinkListService
 		else 
 		{			
 			SortedLinkedList tempNode = sortHead;
-			System.out.println("The required linklist is");
+			System.out.println("The required Ordered linklist is");
 			while(tempNode.sortNext != null)
 			{
 				System.out.print(tempNode.sortData+" -> ");
 				tempNode = tempNode.sortNext;
 			}
 			System.out.println(tempNode.sortData);
+			System.out.println("---------------------------------------------------");
 		}
 	}
 }
