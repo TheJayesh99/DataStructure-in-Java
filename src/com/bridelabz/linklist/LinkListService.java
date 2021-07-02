@@ -3,7 +3,7 @@ package com.bridelabz.linklist;
 public class LinkListService<T>
 {
 
-	LinkList<T> head;
+	public LinkList<T> head;
 	SortedLinkedList sortHead;
 
 	public void add(T data) 
