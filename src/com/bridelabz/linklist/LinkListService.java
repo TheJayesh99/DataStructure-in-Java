@@ -185,7 +185,7 @@ public class LinkListService<T>
 		else 
 		{			
 			LinkList<T> tempNode = head;
-			System.out.println("The required linklist is");
+			System.out.println("The required data  is");
 			while(tempNode.next != null)
 			{
 				System.out.print(tempNode.data+" -> ");
