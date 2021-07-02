@@ -4,7 +4,7 @@ public class QueueService <T>
 {
 	Queue<T> head;
 	Queue<T> tail;
-
+	//to add element in queue
 	public void enqueue(T data) 
 	{
 		Queue<T> newNode = new Queue<T>();
@@ -21,7 +21,8 @@ public class QueueService <T>
 			tail = newNode;
 		}
 	}
-
+	
+	//to delete element in queue
 	public void dequeue()
 	{
 		if(head == null)
@@ -35,6 +36,8 @@ public class QueueService <T>
 			System.out.println("\n Deleted element "+deletedNode.data);
 		}
 	}
+	
+	//to display all the elements in queue
 	public void print() 
 	{
 		if(head == null)
