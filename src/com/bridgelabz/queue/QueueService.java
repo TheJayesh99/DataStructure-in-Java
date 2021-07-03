@@ -1,4 +1,4 @@
-package com.bridelabz.queue;
+package com.bridgelabz.queue;
 
 public class QueueService <T>
 {

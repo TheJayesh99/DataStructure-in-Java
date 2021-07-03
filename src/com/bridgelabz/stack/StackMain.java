@@ -1,4 +1,4 @@
-package com.bridelabz.stack;
+package com.bridgelabz.stack;
 
 public class StackMain 
 {

@@ -1,6 +1,6 @@
-package com.bridelabz.stack;
+package com.bridgelabz.stack;
 
-import com.bridelabz.linklist.LinkListService;
+import com.bridgelabz.linklist.LinkListService;
 
 public class StacksService<T>
 {

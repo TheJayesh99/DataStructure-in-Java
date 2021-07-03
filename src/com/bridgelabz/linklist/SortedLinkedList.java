@@ -1,4 +1,4 @@
-package com.bridelabz.linklist;
+package com.bridgelabz.linklist;
 
 public class SortedLinkedList
 {
