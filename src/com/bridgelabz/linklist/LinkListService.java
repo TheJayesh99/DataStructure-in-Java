@@ -6,6 +6,7 @@ public class LinkListService<T>
 	public LinkList<T> head;
 	SortedLinkedList sortHead;
 
+	//method to add nodes to the linked list
 	public void add(T data) 
 	{
 		LinkList<T> newNode = new LinkList<T>();
@@ -15,6 +16,7 @@ public class LinkListService<T>
 		System.out.println("Added Node "+data);
 	}
 
+	//method to append nodes to the linked list
 	public void append(T data)
 	{
 		LinkList<T> newNode = new LinkList<T>();
@@ -36,6 +38,7 @@ public class LinkListService<T>
 		System.out.println("Appended Node "+data);
 	}
 
+	//method to append node after given element to the linked list
 	public void insertAfter(T afterNodeData , T data)
 	{
 		LinkList<T> newNode = new LinkList<T>();
@@ -65,7 +68,8 @@ public class LinkListService<T>
 			}
 		}
 	}
-
+	
+	//method to delete 1st node in the linked list
 	public void pop()
 	{
 		if(head == null)
@@ -79,6 +83,7 @@ public class LinkListService<T>
 		}
 	}
 
+	//method to delete last node in the linked list
 	public void poplast()
 	{
 		if(head == null)
@@ -99,6 +104,7 @@ public class LinkListService<T>
 		}
 	}
 
+	//method to find  node in the linked list
 	public void searchNode(T searchData)
 	{
 		if(head == null)
@@ -125,6 +131,7 @@ public class LinkListService<T>
 		}
 	}
 
+	//method to delete a given element from the linked list
 	public void delete(T data)
 	{
 		if(head == null)
@@ -157,6 +164,7 @@ public class LinkListService<T>
 		}
 	}
 
+	//method to find number of nodes present in the linked list
 	public void size()
 	{
 		if(head == null)
@@ -176,6 +184,8 @@ public class LinkListService<T>
 			System.out.println("The number of nodes are "+countNode);
 		}
 	}
+	
+	//method to print all nodes that are in  linked list
 	public void print()
 	{
 		if(head == null)
@@ -198,7 +208,7 @@ public class LinkListService<T>
 
 	//	For Ordered list
 
-
+	// method to add nodes in ordered linked list
 	public  void sortAdd(int  data) 
 	{
 		SortedLinkedList newNode = new SortedLinkedList();
@@ -235,6 +245,7 @@ public class LinkListService<T>
 		System.out.println("Added Node "+data);
 	}
 
+	//method to print all the elements present in the ordered linked list
 	public void printSorted()
 	{
 		if(sortHead == null)
